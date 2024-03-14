@@ -1,5 +1,5 @@
 import { question } from "readline-sync";
-import fetchWeatherApi from "./OpenMeteo.mjs";
+import  { displayInfo , fetchWeatherApi} from "./OpenMeteo.mjs";
 
 
 const params = {
@@ -8,5 +8,12 @@ const params = {
     current: "temperature_2m",
   };
 
-fetchWeatherApi('https://api.open-meteo.com/v1/forecast',params )
+  const url = "https://api.open-meteo.com/v1/forecast";
+
+const responses = await fetchWeatherApi(url,params)
+
+const currentWeather = responses.current;
+
+displayInfo(currentWeather, responses);
+
 
