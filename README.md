@@ -1,2 +1,4 @@
 # Weather-CLI
-App that takes input of a place name and tells current weather
+App that takes latitude and longitude of a place and tells current weather
+
+# How To Use
